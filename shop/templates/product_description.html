@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Описание товара
+{% endblock %}
+
+{% block content %}
+    <link href="{% static 'css/product_description.css' %}", rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <img src="{{product.image.url}}", style="max-width: 100%">
+            </div>
+            <div class="col">
+                <h2 class="fw-bold">
+                    {{product.name}}
+                </h2>
+                <br>
+                <div class="row">
+                    <h1 class="display-4 fw-bold">
+                        {{product.price}} руб
+                    </h1>
+                </div>
+                <br>
+                <div class="row">
+                    <a href="{% url 'add_cart' product.id %}" class="btn btn-lg btn-block add-to-cart">
+                        В корзину <i class="material-icons">add_shopping_cart</i>
+                    </a>
+                </div>
+                <br>
+                <h4 class="fw-bold">
+                    Описание
+                </h4>
+                <p>
+                    {{product.description}}
+                </p>
+                <br>
+                <h4 class="fw-bold">
+                    Отзывы
+                </h4>
+                <p>
+                    Отзывов еще никто не оставлял
+                </p>
+<!--                <a href="#" class="btn btn-lg comment">-->
+<!--                    Написать отзыв-->
+<!--                </a>-->
+                <br><br>
+                <div class="hidden_comment container-fluid" style="margin:0;padding:0;">
+                    <div class="row">
+                        <h5 class="fw-bold">
+                            Оставить отзыв
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <a class="close-comment" href="#">
+                            Закрыть
+                        </a>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <p>
+                            Рейтинг*
+                        </p>
+                    </div>
+                    <div class="row"><div class="stars">
+                        <input type="radio" id="rate-1" name="rating-1">
+                        <label for="rate-1"></label>
+                        <input type="radio" id="rate-2" name="rating-1">
+                        <label for="rate-2"></label>
+                        <input type="radio" id="rate-3" name="rating-1">
+                        <label for="rate-3"></label>
+                        <input type="radio" id="rate-4" name="rating-1">
+                        <label for="rate-4"></label>
+                        <input type="radio" id="rate-5" name="rating-1">
+                        <label for="rate-5"></label>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <label for="name">Имя*</label>
+                        <input placeholder="Имя" class="name-email-input" type="text" name="name">
+                    </div>
+                    <div class="row">
+                        <label for="email">Email*</label>
+                        <input placeholder="Email" class="name-email-input" type="email" name="email">
+                    </div>
+                    <div class="row">
+                        <label for="com">Отзыв*</label>
+                        <textarea placeholder="Отзыв" class="textarea-comment" name="com"></textarea>
+                    </div>
+                    <div class="row">
+                        <a class="btn btn-large leave-comment">
+                            Оставить отзыв
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

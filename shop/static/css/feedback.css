@@ -1,0 +1,54 @@
+.instagram-div {
+    background: #F7F7F7;
+}
+
+.instagram-heading {
+    padding: 1% 0 1% 0;
+}
+
+.name-email-form, .textareadiv {
+    display:flex;
+    max-width:60%;
+    margin: 0 auto;
+}
+
+.input-name-email {
+    width: 50%;
+    height: 150%;
+    border: none;
+    background: #F7F7F7;
+    border: 3px solid transparent;
+}
+
+.input-name-email:focus {
+    width: 50%;
+    height: 150%;
+    border: none;
+    background: #F7F7F7;
+    transition: .3s;
+    border: 3px solid #eae3e3;
+}
+
+.feedback-textarea {
+    border: none;
+    background: #F7F7F7;
+    border: 3px solid transparent;
+}
+
+.feedback-textarea:focus {
+    border: none;
+    background: #F7F7F7;
+    border: 3px solid #eae3e3;
+}
+
+.send {
+    color: white;
+    background: #EE632C;
+    border-radius: 0;
+}
+
+.send:hover {
+    color: white;
+    background: #F07240;
+    border-radius: 0;
+}

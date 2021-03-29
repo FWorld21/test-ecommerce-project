@@ -1,0 +1,100 @@
+.count-row {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.test {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EE632C;
+    width: 20%;
+    padding: 0;
+}
+
+.count-col, .quantity {
+    width: auto;
+    margin: 0 5px;
+}
+
+.count-col:hover {
+    display: flex;
+    align-items: center;
+    background: #F07240;
+    cursor: pointer;
+}
+
+.count {
+    text-decoration: none;
+    display: block;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.count:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #F07240;
+}
+
+.amount-price {
+    float: right;
+    color: #000000;
+}
+
+.promocode {
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+.promocode-content {
+    padding: 10%;
+}
+
+.promo-input {
+    width: 95%;
+}
+
+.activate {
+    text-decoration: none;
+    color: #F07240;
+    float: right;
+}
+
+.activate:hover {
+    text-decoration: none;
+    color: #F07240;
+}
+
+.amount {
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+.amount-content {
+    padding: 5%;
+}
+
+.right-amount {
+    float: right;
+}
+
+.order {
+    color: white;
+    background: #EE632C;
+    max-width: 80%;
+    width: 100%;
+    transition: all .3s ease;
+    border-radius: 0px;
+}
+
+.order:hover {
+    color: white;
+    background: #F07240;
+    max-width: 98%;
+    border-radius: 0px;
+}

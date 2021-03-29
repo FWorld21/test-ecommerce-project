@@ -1,0 +1,55 @@
+{% load static %}
+<link href="{% static 'css/product_preview.css' %}" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="fw-bold">
+                Для всех
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        {% for i in products %}
+            <div class="col preview-section-col">
+                <a href="{{i.get_url}}" class="preview-section">
+                    <img src="{{i.image.url}}", style="max-width: 100%">
+                    <h6 style="height:100px">
+                        {{i.name}}
+                    </h6>
+                    <br>
+                    <p class="h4 fw-bold">
+                        {{i.price}} руб
+                    </p>
+                </a>
+                <a href="{{i.get_url}}" class="btn btn-lg btn-block add-to-cart">К товару</a>
+            </div>
+        {% endfor %}
+    </div>
+    <br><br><br>
+    <div class="row">
+        <div class="col">
+            <h3 class="fw-bold">
+                Для детей
+            </h3>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for i in products %}
+            <div class="col preview-section-col">
+                <a href="{{i.get_url}}" class="preview-section">
+                    <img src="{{i.image.url}}", style="max-width: 100%">
+                    <h6 style="height:100px">
+                        {{i.name}}
+                    </h6>
+                    <br>
+                    <p class="h4 fw-bold">
+                        {{i.price}} руб
+                    </p>
+                </a>
+                <a href="{{i.get_url}}" class="btn btn-lg btn-block add-to-cart">К товару</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<br><br><br>

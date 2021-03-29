@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}
+    − 20% На все керамические изделия
+{% endblock %}
+{% load static %}
+{% block content %}
+    <link href="{% static 'css/promotions.css' %}" rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            <img class="main-photo img-fluid" src="{% static 'img/ceramic.webp' %}">
+        </div>
+        <br>
+        <div class="row">
+            <h2 class="fw-bold">
+                − 20% На все керамические изделия
+            </h2>
+        </div>
+        <br>
+        <div class="row">
+            <p>
+                В интернет-магазине на InSales Вы можете вести блог магазина или новостную
+                ленту – это отличный способ привлекать дополнительных покупателей из поисковых
+                систем не только за счет коммерческих запросов, но и за счет информационных.
+                <br>
+                Рассказывайте вашим покупателям о новинках в вашем магазине, или просто полезную
+                информацию о товарах вашей тематики и новостях рынка!
+            </p>
+        </div>
+        <div class="row">
+            <h5 class="fw-bold">
+                Желательно публиковать статьи в блоге магазина не реже, чем 1 раз в месяц.
+            </h5>
+        </div>
+        <div class="row">
+            <p>
+                Статьи блога поддерживают следующий функционал:
+            </p>
+        </div>
+        <div class="row">
+            <ol class="ordered-list">
+                <li>теги к статьям для дополнительной перелинковки и навигации</li>
+                <li>возможность прикрепить товары к статьям</li>
+                <li>возможность добавить изображение (превью) статьи</li>
+                <li>комментарии пользователей</li>
+                <li>возможность закрепить статью вверху новостной ленты</li>
+                <li>отложенную публикацию – можно задать дату, когда статья появится на сайте</li>
+            </ol>
+        </div>
+        <div class="row">
+            <p>----</p>
+        </div>
+        <div class="row">
+            <p>
+                Удалить или отредактировать эту статью можно в
+                <a href="https://demo-gift.myinsales.ru/admin/login?continue=https%3A%2F%2Fdemo-gift.myinsales.ru%2Fadmin2%2Fblogs%3F" class="orange fst-italic">
+                    бэк-офисе сайта
+                </a>
+                в разделе "Статьи"
+                <br>
+                Инструкции по работе с блогом на InSales доступны в нашей документации:
+                <a href="https://www.insales.ru/collection/doc-blog-i-stati" class="orange fst-italic">
+                    https://www.insales.ru/collection/doc-settings/product/rabota-s-blogami
+                </a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+.main-div {
+    margin: 0.1%;
+    background-image: url("../img/recommendations1.jpg");
+    color:white;
+}
+
+.undermain-div {
+    padding: 4%;
+}
+
+.recommendation-preview {
+    max-width: 100%;
+}

@@ -1,0 +1,22 @@
+.logo_gift {
+    padding: 2%;
+}
+
+.footer_logo {
+    width: 100px;
+}
+
+.footer-list {
+    list-style-type: none;
+}
+
+
+.footer-list-link {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-list-link:hover {
+    color: #ee632c;
+}

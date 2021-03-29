@@ -1,0 +1,42 @@
+.add-to-cart {
+    color: white;
+    background: #EE632C;
+    max-width: 98%;
+    margin-left: 2%;
+    opacity: 0;
+    width:100%;
+    transition: all .3s ease;
+    border-radius: 0;
+}
+
+.add-to-cart:hover {
+    color: white;
+    background: #F07240;
+    max-width: 98%;
+    margin-left: 2%;
+    border-radius: 0;
+}
+
+.preview-section-col {
+    text-align: center;
+}
+
+.preview-section {
+    color: black;
+    text-decoration:none;
+}
+
+.preview-section:hover h6 {
+    text-align: center;
+    text-decoration:none;
+    color: #F18257;
+}
+
+.preview-section:hover p {
+    text-align: center;
+    color: black;
+}
+
+.col:hover .add-to-cart {
+    opacity: 1;
+}

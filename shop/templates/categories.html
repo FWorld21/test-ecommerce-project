@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Мой интернет магазин
+{% endblock %}
+{% block content %}
+<link href="{% static 'css/categories.css' %}" rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            {% for i in products_part_1 %}
+                <div class="col preview-section-col">
+                    <a href="{{i.get_url}}" class="preview-section">
+                        <img src="{{i.image.url}}", style="max-width: 100%">
+                        <h6 style="height:100px">
+                            {{i.name}}
+                        </h6>
+                        <br>
+                        <p class="h4 fw-bold">
+                            {{i.price}} руб
+                        </p>
+                    </a>
+                <a href="{{i.get_url}}" class="btn btn-lg btn-block add-to-cart">К товару</a>
+                </div>
+            {% endfor %}
+        </div>
+        <br><br>
+        <div class="row">
+            {% for i in products_part_2 %}
+                <div class="col preview-section-col">
+                    <a href="{{i.get_url}}" class="preview-section">
+                        <img src="{{i.image.url}}", style="max-width: 100%">
+                        <h6 style="height:100px">
+                            {{i.name}}
+                        </h6>
+                        <br>
+                        <p class="h4 fw-bold">
+                            {{i.price}} руб
+                        </p>
+                    </a>
+                <a href="{{i.get_url}}" class="btn btn-lg btn-block add-to-cart">К товару</a>
+                </div>
+            {% endfor %}
+        </div>
+        <br><br>
+        <div class="row">
+            {% for i in products_part_3 %}
+                <div class="col preview-section-col">
+                    <a href="{{i.get_url}}" class="preview-section">
+                        <img src="{{i.image.url}}", style="max-width: 100%">
+                        <h6 style="height:100px">
+                            {{i.name}}
+                        </h6>
+                        <br>
+                        <p class="h4 fw-bold">
+                            {{i.price}} руб
+                        </p>
+                    </a>
+                <a href="{{i.get_url}}" class="btn btn-lg btn-block add-to-cart">К товару</a>
+                </div>
+            {% endfor %}
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row"></div>
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

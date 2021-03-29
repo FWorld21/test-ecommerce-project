@@ -1,0 +1,129 @@
+* {
+    font-family: Ubuntu
+}
+
+.add-to-cart {
+    color: white;
+    background: #EE632C;
+    max-width: 98%;
+    margin-left: 2%;
+    border-radius: 0;
+}
+
+.add-to-cart:hover {
+    color: white;
+    background: #F07240;
+    max-width: 98%;
+    margin-left: 2%;
+    border-radius: 0;
+}
+
+.material-icons {
+    font-size: 18px;
+}
+
+.comment {
+    color: white;
+    background: #EE632C;
+    border-radius: 0;
+}
+
+.comment:hover {
+    color: white;
+    background: #F07240;
+}
+
+
+
+.stars {
+  overflow: hidden;
+  width: 100%;
+}
+
+.stars input[type=radio]:checked ~ label:after {
+  background: url("../img/star_active.png");
+  background-repeat: no-repeat;
+}
+
+.stars input[type=radio] {
+  display: none;
+}
+.stars input[type=radio]:first-child + label {
+  padding-right: 0;
+}
+
+.stars:hover input[type=radio]:checked ~ label:after,
+.stars label:after {
+  background: url("../img/star_active.png");
+  background-repeat: no-repeat;
+}
+
+.stars label {
+  box-sizing: border-box;
+  width: 20%;
+  padding-right: 2%;
+  height: 120px;
+  float: right;
+  cursor: pointer;
+}
+
+.stars label:after {
+  display: block;
+  content: "";
+  height: 120px;
+  width: 100%;
+  float: right;
+  transition: all 0.25s;
+  background: url("../img/star_inactive.png");
+  background-repeat: no-repeat;
+}
+
+.stars label:hover:after,
+.stars label:hover ~ label:after {
+  background: url("../img/star_active.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: auto;
+}
+
+.hidden_comment {
+}
+
+.comment:active .hidden_comment {
+    display: inline-block;
+}
+
+.close-comment {
+    text-decoration: none;
+    color: #EE632C;
+}
+
+.close-comment:hover {
+    text-decoration: none;
+    color: #EE632C;
+}
+
+.name-email-input {
+    border: 1px solid #808080;
+    border-radius: 0px;
+    height: 36px;
+}
+
+.textarea-comment {
+    border: 1px solid #808080;
+    border-radius: 0px;
+    height: 100px;
+}
+
+.leave-comment {
+    margin-top: 5%;
+    background: #EE632C;
+    color: white;
+    border-radius: 0;
+}
+
+.leave-comment:hover {
+    margin-top: 5%;
+    background: #F07240;
+    color: white;
+    border-radius: 0;
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Мой интернет магазин
+{% endblock %}
+{% block content %}
+{% include 'products_preview.html' %}
+{% include 'categories_home.html' %}
+{% include 'center_page.html' %}
+{% include 'promotions.html' %}
+{% include 'recommendations.html' %}
+{% include 'feedback.html' %}
+
+{% endblock %}

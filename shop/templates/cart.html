@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Корзина
+{% endblock %}
+{% block content %}
+    <link href="{% static 'css/cart.css' %}" rel="stylesheet">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row">
+                <h2 class="fw-bold">Корзина</h2>
+            </div>
+            <br>
+            {% if not cart_items %}
+                <div class="row">
+                    <p>Ваша корзина пуста</p>
+                </div>
+            {% else %}
+                <div class="col-8">
+                    {% for i in cart_items %}
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="{{ i.product.get_url }}">
+                                    <img src="{{i.product.image.url}}" style="width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-7">
+                                <h3>
+                                    {{i.product.name}}
+                                </h3>
+                                <p>
+                                    {{i.product.price}} руб
+                                </p>
+                                <div>
+                                    {% if i.quantity < i.product.stock %}
+                                        <div class="container">
+                                            <div class="row count-row">
+                                                <div class="test">
+                                                    <a class="count" href="{% url 'cart_remove' i.product.id %}">
+                                                       -
+                                                    </a>
+                                                    <div class="col-1 quantity">
+                                                    {{i.quantity}}
+                                                    </div>
+                                                    <a class="count" href="{% url 'add_cart' i.product.id %}">
+                                                        +
+                                                    </a>
+
+                                                </div>
+
+                                                <div class="col-9">
+                                                    <p class="amount-price h4">
+                                                        {{i.sub_total}} руб
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="container">
+                                            <div class="row count-row">
+                                                <div class="test">
+                                                    <a class="count" href="{% url 'cart_remove' i.product.id %}">
+<!--                                                    <div class="col-1 count-col">-->
+                                                       -
+<!--                                                    </div>-->
+                                                    </a>
+                                                    <div class="col-1 quantity">
+                                                    {{i.quantity}}
+                                                    </div>
+                                                    <a class="count" href="{% url 'add_cart' i.product.id %}">
+
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-9">
+                                                    <p class="amount-price h4">
+                                                        {{i.sub_total}} руб
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <a href="{% url 'cart_delete' i.product.id %}">
+                                    <i class="material-icons text-dark">
+                                        close
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-3">
+                    <div class="row promocode">
+                        <div class="promocode-content">
+                            <h6 class="fw-bold">
+                                Введите промокод
+                            </h6>
+                            <br>
+                            <input class="promo-input" type="text" placeholder="Промокод">
+                            <br>
+                            <br>
+                            <a class="activate" href="">
+                                Активировать
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row amount">
+                        <div class="amount-content">
+                            <h4 class="fw-bold">
+                                Итого: <span class="right-amount">{{total}} руб</span>
+                            </h4>
+                            <br>
+                            <center>
+                                <a href="" class="btn btn-lg btn-block order">
+                                    Оформить заказ
+                                </a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+.more {
+    color: white;
+    background: #EE632C;
+    border-radius: 0;
+}
+
+.more:hover {
+    color: white;
+    background: #F07240;
+    border-radius: 0;
+}

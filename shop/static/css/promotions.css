@@ -1,0 +1,17 @@
+.main-photo {
+    border-radius: 20px;
+    max-height: 10%;
+}
+
+.ordered-list {
+    margin-left: 5%;
+}
+
+.orange {
+    color: #F18357;
+}
+
+.orange:hover {
+    color: #F18357;
+    text-decoration: none;
+}

@@ -1,0 +1,35 @@
+* {
+    font-family: ubuntu;
+}
+
+.first_navbar {
+    padding: 2%;
+}
+
+.menu_button {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu_button:hover {
+    color: #ee632c;
+}
+
+.material-icons {
+    font-size: 30px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: black;
+}
+
+.category-link:hover {
+    color: #ee632c;
+}
+
+.category-list-item {
+    margin-right: 15px;
+}

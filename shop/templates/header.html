@@ -1,0 +1,50 @@
+{% load static %}
+<link href="{% static 'css/header.css' %}" rel="stylesheet">
+<header>
+    <nav class="navbar navbar-expand-md first_navbar border-bottom">
+        <div class="me-auto">
+            <a href="" class="menu_button">
+                <img src="{% static 'img/menu-button.png' %}">
+                Меню
+            </a>
+        </div>
+        <div class="mx-auto">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.svg' %}" class="main_logo">
+            </a>
+        </div>
+        <div class="ms-auto">
+            <ul class="navbar-nav collapse navbar-collapse">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="material-icons text-dark">search</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="material-icons text-dark">person_outline</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="cart/">
+                        <i class="material-icons text-dark">shopping_cart</i>
+                        {% if item_count > 0 %}
+                            {{item_count}}
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-md">
+        <div class="mx-auto">
+            <ul class="navbar-nav collapse navbar-collapse">
+                {% for i in links %}
+                    <li class="nav-item category-list-item">
+                        <a href="{{i.get_url}}" class="category-link">{{i.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</header>

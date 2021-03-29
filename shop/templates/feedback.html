@@ -1,0 +1,46 @@
+{% load static %}
+<link href="{% static 'css/feedback.css' %}", rel="stylesheet">
+<div class="container">
+    <div class="row text-center instagram-div">
+        <h4 class="instagram-heading">
+            Instagram
+        </h4>
+    </div>
+    <br><br>
+    <form>
+        <div class="row text-center">
+            <div class="col-12 text-center">
+                <h3 class="fw-bold">
+                    Обратная связь
+                </h3>
+            </div>
+            <div class="col name-email-form">
+                <input class="input-name-email" type="text" placeholder="Имя*">
+                <input class="input-name-email" type="text" placeholder="Ваша почта*" style="margin-left: 5%">
+            </div>
+        </div>
+        <br><br>
+        <div class="row text-center textareadiv">
+            <textarea class="feedback-textarea", placeholder="Ваш вопрос, отзыв, или пожелание*"></textarea>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row checkbox-div text-center">
+            <div class="col">
+                <input id="agree" class="agree" type="checkbox" aria-label="Checkbox for following text input">
+                <label for="agree">
+                    Настоящим подтверждаю, что я ознакомлен и согласен с условиями оферты и политики конфиденциальности *
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col">
+                <button class="send btn btn-lg">
+                    Отправить
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
